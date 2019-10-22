@@ -5,7 +5,7 @@ const initialState = [
     { id: 4, name: 'Rear spoiler', price: 250 }
 ]
 
-export function additionalFeaturesReducer(state = initialState, action) {
+export function reducer(state = initialState, action) {
     switch(action.type) {
         default:
             return state;

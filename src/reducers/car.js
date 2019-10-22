@@ -6,7 +6,7 @@ const initialState = {
     features: []
 };
 
-export function carReducer(state = initialState, action) {
+export function reducer(state = initialState, action) {
     switch(action.type) {
         default:
             return state;
