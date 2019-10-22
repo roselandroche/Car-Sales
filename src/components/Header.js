@@ -17,8 +17,7 @@ function mapStateToProps(state) {
   return {
     price: state.car.price,
     name: state.car.name,
-    image: state.car.image,
-    features: state.car.features
+    image: state.car.image
   }
 }
 
