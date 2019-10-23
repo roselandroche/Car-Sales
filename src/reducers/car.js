@@ -1,4 +1,6 @@
 import { REMOVE_FEATURE } from "../actions/removeFeature";
+import { ADD_FEATURE } from '../actions/addFeature';
+// import App from '../App';
 
 const initialState = {
     additionalPrice: 0,
@@ -19,14 +21,22 @@ const initialState = {
 
   export function reducer(state=initialState, action) {
       switch(action.type) {
-          case REMOVE_FEATURE:
+          case ADD_FEATURE:
+              console.log(`Adding feature...`)
               return {
                   ...state,
-                  props.features.filter(item => (
+                  features: [...state, action.payload]
+              }
+          case REMOVE_FEATURE:
+              console.log(`Removing feature...`)
+              return {
+                  ...state,
+                  features: this.props.features.filter(item => item(
                       !item.id
                   ))
               }
           default:
+              console.log(`Mistakes have been made`)
               return state;
       }
   }

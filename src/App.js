@@ -11,12 +11,12 @@ const App = () => {
 
   const removeFeature = (item, props) => {
     // dispatch an action here to remove an item
-    props.dispatch(REMOVE_FEATURE, payload: item);
+    props.dispatch({ REMOVE_FEATURE, payload: item });
   };
 
   const buyItem = (item, props) => {
     // dispatch an action here to add an item
-    props.dispatch(ADD_FEATURE, payload: item);
+    props.dispatch({ ADD_FEATURE, payload: item });
   };
 
   return (
