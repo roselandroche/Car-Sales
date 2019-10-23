@@ -4,6 +4,7 @@ import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
+
 import { REMOVE_FEATURE } from './actions/removeFeature';
 import { ADD_FEATURE } from './actions/addFeature';
 
