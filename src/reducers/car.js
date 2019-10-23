@@ -1,4 +1,6 @@
-const state = {
+import { REMOVE_FEATURE } from "../actions/removeFeature";
+
+const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,
@@ -14,3 +16,17 @@ const state = {
       { id: 4, name: 'Rear spoiler', price: 250 }
     ]
   };
+
+  export function reducer(state=initialState, action) {
+      switch(action.type) {
+          case REMOVE_FEATURE:
+              return {
+                  ...state,
+                  props.features.filter(item => (
+                      !item.id
+                  ))
+              }
+          default:
+              return state;
+      }
+  }
