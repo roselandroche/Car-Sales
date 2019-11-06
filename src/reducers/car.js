@@ -25,7 +25,13 @@ const initialState = {
               console.log(`Adding feature...`)
               return {
                   ...state,
-                  features: [...state, action.payload]
+                  car: {
+                    ...state.car,
+                    price: state.car.price + action.payload.price,
+                    features: [...state.car.features, action.payload]},
+                additionalFeatures: state.additionalFeatures.filter(item => {
+                    return item.id !== action.payload.id
+                })
               }
           case REMOVE_FEATURE:
               console.log(`Removing feature...`)
